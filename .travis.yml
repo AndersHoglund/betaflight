@@ -72,11 +72,18 @@ git:
 addons:
   apt:
     packages:
+      - lcov
+      - build-essential
+      - git
       - libc6-i386
 
 # We use cpp for unit tests, and c for the main project.
 language: cpp
 compiler: clang
+
+before_install:
+  - pip install --user cpp-coveralls
+  - gem install coveralls-lcov
 
 install:
   - make arm_sdk_install
@@ -85,6 +92,13 @@ before_script:
   - tools/gcc-arm-none-eabi-6_2-2016q4/bin/arm-none-eabi-gcc --version
   - clang --version
   - clang++ --version
+
+after_success:
+  - cd ${TRAVIS_BUILD_DIR}
+  - lcov --directory . -b src/test --capture --output-file coverage.info # capture coverage info
+  - lcov --remove coverage.info 'lib/test/*' 'src/test/*' '/usr/*' --output-file coverage.info # filter out system and test code
+  - lcov --list coverage.info # debug before upload
+  - coveralls-lcov coverage.info # uploads to coveralls
 
 script: ./.travis.sh
 
