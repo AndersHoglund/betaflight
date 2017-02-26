@@ -1202,10 +1202,19 @@ targets:
 	$(V0) @echo "Target:        $(TARGET)"
 	$(V0) @echo "Base target:   $(BASE_TARGET)"
 
+LCOV := $(shell command lcov -v 2> /dev/null)
+
 ## test              : run the cleanflight test suite
 ## junittest         : run the cleanflight test suite, producing Junit XML result files.
 test junittest:
 	$(V0) cd src/test && $(MAKE) $@
+ifndef LCOV
+	$(info "install lcov to get a table with code coverage after tests")
+else
+	-lcov --directory . -b src/test --capture --output-file coverage.info
+	-lcov --remove coverage.info 'lib/test/*' 'src/test/*' '/usr/*' --output-file coverage.info
+	-lcov --list coverage.info
+endif
 
 # rebuild everything when makefile changes
 $(TARGET_OBJS) : Makefile
