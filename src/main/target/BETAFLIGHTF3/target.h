@@ -61,6 +61,11 @@
 
 #define SERIAL_PORT_COUNT       6
 
+#ifdef BETAFLIGHTF3_MSPUART
+#define USE_MSP_UART                               // Assumed UART1, clashes with smartport defaults.
+#define SBUS_TELEMETRY_UART     SERIAL_PORT_USART3 // Move away.
+#endif
+
 #define USE_ESCSERIAL
 #define ESCSERIAL_TIMER_TX_PIN  PB7  // (HARDARE=0,PPM)
 
@@ -121,7 +126,9 @@
 #define DEFAULT_RX_FEATURE      FEATURE_RX_SERIAL
 #define SERIALRX_PROVIDER       SERIALRX_SBUS
 #define SERIALRX_UART           SERIAL_PORT_USART2
+#ifndef SBUS_TELEMETRY_UART
 #define SBUS_TELEMETRY_UART     SERIAL_PORT_USART1
+#endif
 #define DEFAULT_FEATURES        (FEATURE_TELEMETRY | FEATURE_OSD)
 
 // IO - stm32f303cc in 48pin package

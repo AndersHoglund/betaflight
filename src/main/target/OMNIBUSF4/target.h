@@ -56,6 +56,18 @@
 #define USBD_PRODUCT_STRING "OmnibusF4"
 #endif
 
+#if defined(OMNIBUSF4_MSPUART)
+#define USE_MSP_UART
+#endif
+
+#if defined(DYSF4PRO_MSPUART)
+#define USE_MSP_UART
+#endif
+
+#if defined(OMNIBUSF4SD_MSPUART)
+#define USE_MSP_UART
+#endif
+
 #define LED0_PIN                PB5
 #define USE_BEEPER
 #define BEEPER_PIN              PB4

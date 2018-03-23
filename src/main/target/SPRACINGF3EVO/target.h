@@ -94,6 +94,11 @@
 
 #define SERIAL_PORT_COUNT       4
 
+#ifdef SPRACINGF3EVO_MSPUART
+#define USE_MSP_UART
+#endif
+
+
 #define USE_ESCSERIAL
 #define ESCSERIAL_TIMER_TX_PIN  PA15  // (HARDARE=0,PPM)
 

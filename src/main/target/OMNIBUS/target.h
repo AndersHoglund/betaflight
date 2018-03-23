@@ -69,6 +69,10 @@
 
 #define SERIAL_PORT_COUNT       6
 
+#ifdef OMNIBUS_MSPUART
+#define USE_MSP_UART
+#endif
+
 #define UART1_TX_PIN            PA9
 #define UART1_RX_PIN            PA10
 
