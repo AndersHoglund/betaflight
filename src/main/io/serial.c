@@ -147,6 +147,15 @@ void pgResetFn_serialConfig(serialConfig_t *serialConfig)
     }
 #endif
 
+#if defined(USE_VCP) && defined(USE_MSP_UART3)
+    if (serialConfig->portConfigs[0].identifier == SERIAL_PORT_USB_VCP) {
+        serialPortConfig_t * uart3Config = serialFindPortConfiguration(SERIAL_PORT_USART3);
+        if (uart3Config) {
+            uart3Config->functionMask = FUNCTION_MSP;
+        }
+    }
+#endif
+
     serialConfig->reboot_character = 'R';
     serialConfig->serial_update_rate_hz = 100;
 }
