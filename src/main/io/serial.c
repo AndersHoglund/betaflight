@@ -138,7 +138,7 @@ void pgResetFn_serialConfig(serialConfig_t *serialConfig)
     }
 #endif
 
-#if defined(USE_VCP) && defined(USE_MSP_UART)
+#if defined(USE_VCP) && (defined(USE_MSP_UART) || defined(USE_MSP_UART1))
     if (serialConfig->portConfigs[0].identifier == SERIAL_PORT_USB_VCP) {
         serialPortConfig_t * uart1Config = serialFindPortConfiguration(SERIAL_PORT_USART1);
         if (uart1Config) {
@@ -147,7 +147,7 @@ void pgResetFn_serialConfig(serialConfig_t *serialConfig)
     }
 #endif
 
-#if defined(USE_VCP) && defined(USE_MSP_UART3)
+#if defined(USE_MSP_UART3)
     if (serialConfig->portConfigs[0].identifier == SERIAL_PORT_USB_VCP) {
         serialPortConfig_t * uart3Config = serialFindPortConfiguration(SERIAL_PORT_USART3);
         if (uart3Config) {
