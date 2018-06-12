@@ -43,6 +43,10 @@
 #define USBD_PRODUCT_STRING "OmnibusF4 Fireworks"
 #endif
 
+#ifdef STM32F4DISCOVERY_MSPUART3
+#define USE_MSP_UART3
+#endif
+#
 #if defined(OMNIBUSF4FW1)
 #define LED0_PIN                PB5
 #else
