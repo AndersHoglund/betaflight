@@ -98,10 +98,7 @@
 #define USE_MSP_UART
 
 //Make room
-#undef USE_TELEMETRY_MAVLINK
-#undef USE_TELEMETRY_LTM
-#undef USE_SERIALRX_XBUS
-#undef USE_TELEMETRY_HOTT
+#undef USE_TELEMETRY_FRSKY_HUB
 #endif
 
 

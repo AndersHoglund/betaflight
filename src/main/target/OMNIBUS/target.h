@@ -71,6 +71,9 @@
 
 #ifdef OMNIBUS_MSPUART
 #define USE_MSP_UART
+
+//Make room
+#undef USE_TELEMETRY_FRSKY_HUB
 #endif
 
 #define UART1_TX_PIN            PA9
