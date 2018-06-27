@@ -20,6 +20,10 @@
 
 #pragma once
 
+#if defined (FURYF3OSD_MSPUART) || defined (FURYF3_MSPUART)
+#define USE_MSP_UART
+#endif
+
 #ifdef FURYF3OSD
     #define TARGET_BOARD_IDENTIFIER "FY3O"
 //    #define USBD_PRODUCT_STRING     "FuryF3OSD"
