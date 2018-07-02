@@ -22,6 +22,22 @@
 
 #define USE_TARGET_CONFIG
 
+#if defined(OMNIBUSF4_MSPUART)
+#define USE_MSP_UART
+#endif
+
+#if defined(DYSF4PRO_MSPUART)
+#define USE_MSP_UART
+#endif
+
+#if defined(OMNIBUSF4SD_MSPUART)
+#define USE_MSP_UART
+#endif
+
+#if defined(LUXF4OSD_MSPUART)
+#define USE_MSP_UART
+#endif
+
 #if defined(OMNIBUSF4SD)
 #define TARGET_BOARD_IDENTIFIER "OBSD"
 #elif defined(LUXF4OSD)
