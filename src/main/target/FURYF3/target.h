@@ -24,6 +24,11 @@
 #define USE_MSP_UART
 #endif
 
+#if defined (FURYF3OSD_MSPUART)
+#define FURYF3OSD
+#define USE_MSP_UART
+#endif
+
 #ifdef FURYF3OSD
     #define TARGET_BOARD_IDENTIFIER "FY3O"
 //    #define USBD_PRODUCT_STRING     "FuryF3OSD"

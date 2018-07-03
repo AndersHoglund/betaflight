@@ -1,0 +1,2 @@
+FEATURES   += VCP ONBOARDFLASH
+TARGET_SRC += drivers/max7456.c
