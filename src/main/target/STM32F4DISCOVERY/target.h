@@ -21,12 +21,10 @@
 #pragma once
 
 #ifdef STM32F4DISCOVERY_MSPUART
-#define STM32F4DISCOVERY
 #define USE_MSP_UART
 #endif
 
 #ifdef STM32F4DISCOVERY_MSPUART3
-#define STM32F4DISCOVERY
 #define USE_MSP_UART3
 #endif
 

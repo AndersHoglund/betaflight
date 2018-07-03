@@ -23,7 +23,6 @@
 #define USE_TARGET_CONFIG
 
 #if defined(OMNIBUSF4_MSPUART)
-#define OMNIBUSF4
 #define USE_MSP_UART
 #endif
 

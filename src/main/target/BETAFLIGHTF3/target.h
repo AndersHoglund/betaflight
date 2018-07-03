@@ -23,7 +23,6 @@
 #pragma once
 
 #ifdef BETAFLIGHTF3_MSPUART
-#define BETAFLIGHTF3
 #define USE_MSP_UART
 #endif
 

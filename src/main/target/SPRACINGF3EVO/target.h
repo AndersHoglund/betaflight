@@ -21,7 +21,6 @@
 #pragma once
 
 #ifdef SPRACINGF3EVO_MSPUART
-#define SPRACINGF3EVO
 #define USE_MSP_UART
 #endif
 

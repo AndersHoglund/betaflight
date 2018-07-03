@@ -21,7 +21,6 @@
 #pragma once
 
 #ifdef MATEKF405_MSPUART
-#define MATEKF405
 #define USE_MSP_UART
 #endif
 
