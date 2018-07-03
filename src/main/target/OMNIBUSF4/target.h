@@ -23,18 +23,22 @@
 #define USE_TARGET_CONFIG
 
 #if defined(OMNIBUSF4_MSPUART)
+#define OMNIBUSF4
 #define USE_MSP_UART
 #endif
 
 #if defined(DYSF4PRO_MSPUART)
+#define DYSF4PRO
 #define USE_MSP_UART
 #endif
 
 #if defined(OMNIBUSF4SD_MSPUART)
+#define OMNIBUSF4SD
 #define USE_MSP_UART
 #endif
 
 #if defined(LUXF4OSD_MSPUART)
+#define LUXF4OSD
 #define USE_MSP_UART
 #endif
 

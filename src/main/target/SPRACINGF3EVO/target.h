@@ -20,6 +20,11 @@
 
 #pragma once
 
+#ifdef SPRACINGF3EVO_MSPUART
+#define SPRACINGF3EVO
+#define USE_MSP_UART
+#endif
+
 #ifdef AIORACERF3
 #define TARGET_BOARD_IDENTIFIER "ARF3"
 #elif SPRACINGF3MQ
@@ -95,8 +100,6 @@
 #define SERIAL_PORT_COUNT       4
 
 #ifdef SPRACINGF3EVO_MSPUART
-#define USE_MSP_UART
-
 //Make room
 #undef USE_TELEMETRY_FRSKY_HUB
 #endif

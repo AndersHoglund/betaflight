@@ -22,6 +22,11 @@
 
 #pragma once
 
+#ifdef BETAFLIGHTF3_MSPUART
+#define BETAFLIGHTF3
+#define USE_MSP_UART
+#endif
+
 #define TARGET_BOARD_IDENTIFIER "BFF3"
 
 #define USE_BEEPER
@@ -62,7 +67,6 @@
 #define SERIAL_PORT_COUNT       6
 
 #ifdef BETAFLIGHTF3_MSPUART
-#define USE_MSP_UART                               // Assumed UART1, clashes with smartport defaults.
 #define SBUS_TELEMETRY_UART     SERIAL_PORT_USART3 // Move away.
 #endif
 

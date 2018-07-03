@@ -20,6 +20,11 @@
 
 #pragma once
 
+#ifdef MATEKF405_MSPUART
+#define MATEKF405
+#define USE_MSP_UART
+#endif
+
 #define TARGET_BOARD_IDENTIFIER "MKF4"
 #define USBD_PRODUCT_STRING  "MatekF4"
 
@@ -147,11 +152,6 @@
 #define USE_SOFTSERIAL2
 
 #define SERIAL_PORT_COUNT       8
-
-#ifdef MATEKF405_MSPUART
-#define USE_MSP_UART
-#endif
-
 
 #define DEFAULT_RX_FEATURE      FEATURE_RX_SERIAL
 #define SERIALRX_PROVIDER       SERIALRX_SBUS

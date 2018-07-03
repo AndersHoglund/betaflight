@@ -20,7 +20,13 @@
 
 #pragma once
 
-#if defined (FURYF3OSD_MSPUART) || defined (FURYF3_MSPUART)
+#if defined (FURYF3OSD_MSPUART)
+#define FURYF3OSD
+#define USE_MSP_UART
+#endif
+
+#if defined (FURYF3_MSPUART)
+#define FURYF3
 #define USE_MSP_UART
 #endif
 
