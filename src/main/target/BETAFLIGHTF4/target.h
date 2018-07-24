@@ -20,6 +20,14 @@
 
 #pragma once
 
+#ifdef BETAFLIGHTF4_MSPUART
+#define USE_MSP_UART
+#endif
+
+#ifdef BETAFLIGHTF4_MSPUART3
+#define USE_MSP_UART3
+#endif
+
 #define TARGET_BOARD_IDENTIFIER "BFF4"
 #define USBD_PRODUCT_STRING     "BetaFlightF4"
 
