@@ -26,6 +26,8 @@
 #define USE_MSP_UART
 #endif
 
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+
 #define TARGET_BOARD_IDENTIFIER "BFF3"
 
 #define USE_BEEPER
