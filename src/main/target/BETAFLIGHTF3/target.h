@@ -26,6 +26,7 @@
 #define USE_MSP_UART
 #endif
 
+#undef USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
 #undef USE_SERIALRX_SUMD       // Graupner Hott protocol
 
 #define TARGET_BOARD_IDENTIFIER "BFF3"
