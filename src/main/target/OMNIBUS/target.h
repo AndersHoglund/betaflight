@@ -71,10 +71,13 @@
 
 #ifdef OMNIBUS_MSPUART
 #define USE_MSP_UART
+#endif
 
 //Make room
-#undef USE_TELEMETRY_FRSKY_HUB
-#endif
+#undef USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
 
 #define UART1_TX_PIN            PA9
 #define UART1_RX_PIN            PA10
