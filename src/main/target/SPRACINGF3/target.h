@@ -19,6 +19,15 @@
  */
 
 #pragma once
+#if defined(SPRACINGF3)
+// Make room in flash
+#define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
+#undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undef USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
+#undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+
+#endif
 
 #if defined(RMDO)
 #define TARGET_BOARD_IDENTIFIER "RMDO"
@@ -56,8 +65,8 @@
 
 #define USE_ACC
 
-#define USE_BARO
-#define USE_BARO_BMP280
+//#define USE_BARO
+//#define USE_BARO_BMP280
 
 #if defined(FLIP32F3OSD)
 #define USE_GYRO_MPU6500
@@ -115,18 +124,18 @@
 #define RANGEFINDER_HCSR04_TRIGGER_PIN       PB0
 #define RANGEFINDER_HCSR04_ECHO_PIN          PB1
 
-#define USE_BARO_MS5611
-#define USE_BARO_BMP085
+//#define USE_BARO_MS5611
+//#define USE_BARO_BMP085
 
-#define USE_MAG
-#define USE_MAG_AK8975
-#define USE_MAG_HMC5883
-#define USE_MAG_QMC5883
-#define MAG_HMC5883_ALIGN       CW270_DEG
+//#define USE_MAG
+//#define USE_MAG_AK8975
+//#define USE_MAG_HMC5883
+//#define USE_MAG_QMC5883
+//#define MAG_HMC5883_ALIGN       CW270_DEG
 
-#define USE_MAG_DATA_READY_SIGNAL
-#define ENSURE_MAG_DATA_READY_IS_HIGH
-#define MAG_INT_EXTI            PC14
+//#define USE_MAG_DATA_READY_SIGNAL
+//#define ENSURE_MAG_DATA_READY_IS_HIGH
+//#define MAG_INT_EXTI            PC14
 #endif
 
 #if !defined(IRCSYNERGYF3)
@@ -137,19 +146,20 @@
 #define USE_UART1
 #define USE_UART2
 #define USE_UART3
-#define USE_SOFTSERIAL1
-#define USE_SOFTSERIAL2
+//#define USE_SOFTSERIAL1
+//#define USE_SOFTSERIAL2
 
-#define SERIAL_PORT_COUNT       5
+//#define SERIAL_PORT_COUNT       5
+#define SERIAL_PORT_COUNT       3
 
 #if !defined(ZCOREF3)
-#define SOFTSERIAL1_RX_PIN      PB4 // PWM 5
-#define SOFTSERIAL1_TX_PIN      PB5 // PWM 6
+//#define SOFTSERIAL1_RX_PIN      PB4 // PWM 5
+//#define SOFTSERIAL1_TX_PIN      PB5 // PWM 6
 
-#define SOFTSERIAL2_RX_PIN      PB0 // PWM 7
-#define SOFTSERIAL2_TX_PIN      PB1 // PWM 8
+//#define SOFTSERIAL2_RX_PIN      PB0 // PWM 7
+//#define SOFTSERIAL2_TX_PIN      PB1 // PWM 8
 
-#define RANGEFINDER_HCSR04_SOFTSERIAL2_EXCLUSIVE
+//#define RANGEFINDER_HCSR04_SOFTSERIAL2_EXCLUSIVE
 #endif
 
 #define USE_ESCSERIAL
@@ -200,8 +210,8 @@
 #if !defined(IRCSYNERGYF3)
 #define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
 
-#define DEFAULT_RX_FEATURE      FEATURE_RX_PPM
-#define DEFAULT_FEATURES        (FEATURE_RSSI_ADC | FEATURE_TELEMETRY)
+#define DEFAULT_RX_FEATURE      FEATURE_RX_SERIAL
+//#define DEFAULT_FEATURES        (FEATURE_RSSI_ADC | FEATURE_TELEMETRY)
 #endif
 
 // IO - stm32f303cc in 48pin package
