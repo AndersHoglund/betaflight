@@ -20,6 +20,10 @@
 
 #pragma once
 
+//Make room
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_TELEMETRY_FRSKY_HUB
+
 #ifdef SPRACINGF3EVO_MSPUART
 #define USE_MSP_UART
 #endif
@@ -97,12 +101,6 @@
 #define SOFTSERIAL2_TX_PIN      PB1 // PWM 8
 
 #define SERIAL_PORT_COUNT       4
-
-#ifdef SPRACINGF3EVO_MSPUART
-//Make room
-#undef USE_TELEMETRY_FRSKY_HUB
-#endif
-
 
 #define USE_ESCSERIAL
 #define ESCSERIAL_TIMER_TX_PIN  PA15  // (HARDARE=0,PPM)
