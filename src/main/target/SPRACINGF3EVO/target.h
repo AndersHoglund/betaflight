@@ -21,7 +21,10 @@
 #pragma once
 
 //Make room
+#undef USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
 #undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
 #undef USE_TELEMETRY_FRSKY_HUB
 
 #ifdef SPRACINGF3EVO_MSPUART
