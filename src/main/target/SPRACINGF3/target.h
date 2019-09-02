@@ -26,6 +26,7 @@
 #undef USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
 #undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
 #undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_SERIALRX_SUMH       // Graupner legacy protocol
 
 #endif
 
