@@ -30,6 +30,7 @@
 #undef USE_SERIALRX_SUMD       // Graupner Hott protocol
 #undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
 #undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
+#undef USE_TELEMETRY_FRSKY_HUB
 
 #define TARGET_BOARD_IDENTIFIER "BFF3"
 
