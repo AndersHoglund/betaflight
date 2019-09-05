@@ -19,7 +19,7 @@
  */
 
 #pragma once
-#if defined(SPRACINGF3)
+
 // Make room in flash
 #define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
 #undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
@@ -27,8 +27,8 @@
 #undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
 #undef USE_SERIALRX_SUMD       // Graupner Hott protocol
 #undef USE_SERIALRX_SUMH       // Graupner legacy protocol
+#undef USE_TELEMETRY_FRSKY_HUB
 
-#endif
 
 #if defined(RMDO)
 #define TARGET_BOARD_IDENTIFIER "RMDO"
