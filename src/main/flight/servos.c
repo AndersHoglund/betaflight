@@ -129,8 +129,10 @@ static const servoMixer_t servoMixerBI[] = {
 };
 
 static const servoMixer_t servoMixerDual[] = {
-    { SERVO_DUALCOPTER_LEFT, INPUT_STABILIZED_PITCH, 100, 0, 0, 100, 0 },
-    { SERVO_DUALCOPTER_RIGHT, INPUT_STABILIZED_ROLL,  100, 0, 0, 100, 0 },
+    { SERVO_DUALCOPTER_FRONT, INPUT_STABILIZED_YAW,   100, 0, 0, 100, 0 },
+    { SERVO_DUALCOPTER_FRONT, INPUT_STABILIZED_ROLL, -100, 0, 0, 100, 0 },
+    { SERVO_DUALCOPTER_REAR, INPUT_STABILIZED_YAW,    100, 0, 0, 100, 0 },
+    { SERVO_DUALCOPTER_REAR, INPUT_STABILIZED_ROLL,   100, 0, 0, 100, 0 },
 };
 
 static const servoMixer_t servoMixerSingle[] = {
@@ -364,8 +366,8 @@ void writeServos(void)
         break;
 
     case MIXER_DUALCOPTER:
-        writeServoWithTracking(servoIndex++, SERVO_DUALCOPTER_LEFT);
-        writeServoWithTracking(servoIndex++, SERVO_DUALCOPTER_RIGHT);
+        writeServoWithTracking(servoIndex++, SERVO_DUALCOPTER_FRONT);
+        writeServoWithTracking(servoIndex++, SERVO_DUALCOPTER_REAR);
         break;
 
     case MIXER_SINGLECOPTER:
