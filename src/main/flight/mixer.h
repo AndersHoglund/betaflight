@@ -45,7 +45,7 @@ typedef enum mixerMode
     MIXER_OCTOX8 = 11,
     MIXER_OCTOFLATP = 12,
     MIXER_OCTOFLATX = 13,
-    MIXER_AIRPLANE = 14,        // airplane / singlecopter / dualcopter (not yet properly supported)
+    MIXER_AIRPLANE = 14,        // airplane / singlecopter (not yet properly supported)
     MIXER_HELI_120_CCPM = 15,
     MIXER_HELI_90_DEG = 16,
     MIXER_VTAIL4 = 17,
