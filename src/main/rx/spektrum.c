@@ -18,6 +18,8 @@
  * If not, see <http://www.gnu.org/licenses/>.
  */
 
+// Testing PAT
+
 #include "platform.h"
 
 #ifdef USE_SERIALRX_SPEKTRUM
